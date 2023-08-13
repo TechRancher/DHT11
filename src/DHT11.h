@@ -15,6 +15,15 @@ public:
 
   // Reads and returns the temperature from the sensor. Returns -1 if the checksum is incorrect.
   float readTemperature();
+  
+  // Returns the temperature from Celsius to Fahrenheit.
+  float convertToFahrenheit(float Temp);
+  
+  // Returns the temperature from Fahrenheit to Celsius.
+  float convertToCelsius(float FTemp);
+  
+  // Returns the Heat Index
+  float computeHeatIndex(float Temp, float rH, bool isFahrenheit);
 
 private:
   int _pin;
