@@ -97,7 +97,7 @@ float DHT11::convertToCelsius(float FTemp)
   return cT;
 }
 // Computes Heat Index
-float DHT11::computeHeatIndex(float Temp, float rH, bool isFahrenheit)
+float DHT11::computeHeatIndex(float Temp, float rH, bool isFahrenheit=false)
 {
   if(!isFahrenheit){
     float T = convertToFahrenheit(Temp);
